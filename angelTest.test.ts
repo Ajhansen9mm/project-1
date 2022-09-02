@@ -27,7 +27,7 @@ test('forgot password', async () => {
     await angel.setInput(angel.password, '5555')
     await angel.click(angel.loginBtn) 
     await angel.click(angel.forgotPassword)
-    await angel.setInput(angel.userName, 'toangelc@yahoo.com.tw')
+    
     await angel.click(angel.sendResetLink)
     await angel.click(angel.close)
     await angel.driver.sleep(40000)
