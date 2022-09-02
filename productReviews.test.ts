@@ -10,6 +10,11 @@ test('users can look at product reviews', async () => {
     await drop.click(drop.itemOne)
     await drop.click(drop.reviewTab)
     await drop.driver.sleep(5000)
+    await drop.driver.takeScreenshot().then(
+    function(image) {
+        require('fs').writeFileSync('reviews test', image, 'base64')})
+    
+
     await drop.driver.quit()
 
 
